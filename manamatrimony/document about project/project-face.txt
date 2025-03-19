@@ -1,0 +1,266 @@
+Main module of System
+Jobseeker Section
+Registration Module:
+
+•	User enter account details, contact details, and resume summary, education details, upload resume information to become a member.
+•	Free resume posting during the registration.
+•	User can easily select the job mail alert and news letter alert during the registration itself.
+•	Activation emails send it to the user after registration.
+
+Login Module
+
+•	User easily login with their username and password.
+
+Forget Password Module
+
+•	User receive mail for forget password
+
+Home Page Module
+
+•	Home town search - user search the job in his / her home town
+•	Search agent - user can create the agent and search job by any one search agent
+•	User can block and unblock the companies which one company he / she want to block or unblock Set profile visibility of his / her profile.
+•	User can set their resume either active or inactive.
+•	Change password - user change new password into new password.
+•	User can preview, edit, delete and print their resume.
+•	User can update the profile
+
+
+Search job Module
+
+•	Quick job search - Enter any keyword to search jobs.
+•	Advance job search - Enter keyword or experience or location or functional area to search jobs.
+•	Jobs search by role - Selecting the category or subcategory to search jobs.
+•	Job search by industry - Choose any one industry to search jobs.
+•	My Saved Jobs - User can view their saved jobs.
+
+Saved Job Module
+
+•	User can save the jobs when they are searching the jobs in the site.
+•	User can apply the jobs from the saved job list.
+
+
+
+Employer Section
+
+Registration Module
+
+•	User enters their account information, company details, and primary contact details.
+•	User can easily select the job mail alert and news letter alert during the registration itself.
+•	Activation emails send it to the user after registration
+
+Login Module
+
+•	User easily login with their username and password.
+
+Forget Password Module
+
+•	User receive mail for forget password
+
+Profile
+
+•	Profile view
+
+Edit profile
+
+•	Update contact details - Name, Gender, DOB, Country and Contact Details
+•	Update resume summary - Experience, key skills, functional area, industry, resume headline.
+•	Update education details - Qualification, specialization and year of passing.
+Find Candidate
+
+•	Find the job seekers who are apply for the posting jobs.
+•	View their responses.
+•	Recruiter can send email to the job seekers.
+•	Recruiters create the common mail message before sending the email.
+•	Recruiter can download the job seekers resume who are all apply for the job.
+•	Resume access
+
+Recruiters are searching the application of the user.
+
+•	Enter the detail about job position, functional area, industry type, keyword, experience, qualification, location, country, and order by date.
+•	If the employer or recruiter was not order any package it shows the buy package link
+•	After the employers or recruiters are buying the package then only they can search the job seeker resumes.
+
+Post job
+
+•	Post the job for recruitment.
+•	For posting the job the employer should order the package.
+•	If the user was not buying the pack they can’t post any single job.
+
+Database access
+
+•	Database accessing has two packages.
+•	By choosing any one they got the database accessing.
+
+Job posting
+
+•	Job posting have four packages.
+•	By choosing any one they got the permission for how many jobs the employer or recruiter can post.
+•	Based on the package they have some validity. Up to the validity the employer can post the job after that they have to buy the package for post job.
+
+Featured employer
+
+•	For featured employer have two types of packages.
+•	By choosing any one they got the information about the featured employers in their home page.
+
+Posted jobs
+
+•	Posted jobs are listed.
+•	The employer can edit the jobs.
+•	Delete jobs.
+•	View jobs.
+
+
+
+ADMIN SECTION:
+
+Manage site:
+
+•	Administrator
+•	Maintain the administrator username and password.
+•	Add username and password.
+•	Edit and delete password. Functional Area
+•	Add functional area
+•	Edit functional area
+•	Remove functional area Industry Type
+•	Add industry type
+•	Edit industry type
+•	Remove industry type Home Page Ads
+•	Add home page ads.
+•	Edit ads
+•	Remove ads
+•	Maintain active and inactive ads
+
+Enquires
+
+•	Queries or comments are posted by user.
+•	Manage the admin enquiries
+•	Reply queries or comments to the user.
+•	Delete enquiries.
+•	Edit about Us
+•	Edit the about us information
+•	Edit here in user view these information is update well.
+•	Edit Terms & conditions
+•	Edit the terms and condition information.
+•	Admin can edit this information and in user view these
+
+Information will update.
+
+•	Edit Copyright
+•	Edit the copy right information.
+•	Admin can edit this information and in user view these
+•	Information will update.
+
+Price settings:
+
+•	Database access price
+•	Add product
+•	Edit product
+•	Remove product
+•	These updates are viewed in the payment package details in user view section.
+
+
+
+Job Postings
+
+•	Add product.
+•	Edit product.
+•	Remove product.
+•	Maintains the product name, days allowed, number jobs, price amount. The admin update and delete and add these details.
+
+Featured Employer
+
+•	Add product.
+•	Edit product.
+•	Remove product.
+•	Maintains the product name, days allowed, number jobs, price amount. The admin update and delete and add these details.
+
+Newsletters:
+
+•	Job seekers
+•	Send the news letter about the jobs site to the job seekers.
+
+Recruiters
+
+•	Send the news letter about the jobs site to the recruiters.
+
+Manage seekers:
+
+•	Users Address
+
+•	Maintains the user address information.
+
+User’s profile
+
+•	Maintains the user profile information.
+•	Delete the user profile.
+•	Make the user profile as an active or inactive profile.
+•	Based on that status when the recruiter search the resumes,
+•	If the profile status was active recruiter can view their user profile otherwise they can't view their profile information.
+•	When the admin is going to make the profile status either active or inactive admin have to enter the reason for change the profile status.
+•	Reason will send it to the user.
+
+•	Manage employers:
+
+Featured Employer
+
+•	Employer or recruiter buys the package for feature employer.
+•	Admin Maintain the featured logo details.
+•	Admin Mark the feature logo status either active or inactive
+•	Before mark as active or inactive the admin contact the recruiter to send the format of images.
+•	Based on the admin status it will view in the home page as a featured employer list.
+
+List of Members
+
+•	Maintains the database access members
+•	Maintain the standard employers.
+•	Maintain the featured employers.
+•	Maintain the list of premium employers.
+•	Maintain the list of club members.
+
+Employers Address
+
+•	Maintain the employers address details.
+
+Employers Profile
+
+•	Maintain the employers profile details
+•	Admin can delete the employers
+•	Admin can mark the employer either active or inactive.
+•	Admin can view employer's profile.
+
+Reports:
+
+•	CV's Search-Nationality
+•	Maintain the CV's by nationality that is country vice.
+•	List the county and members count.
+•	Export these details in the excel format.
+
+CV's Search-Industry
+
+•	Maintain the CV's by industry that is Industry vice.
+•	Maintain these details in the excel format.
+
+Members Reports
+
+•	Maintain the CV's by nationality that is country vice.
+•	Maintain these details in the excel format.
+
+
+Product Features
+Manage Logo
+
+•	Admin Can Change Logo from Admin Panel
+•	Admin Also Upload New Logo for Website
+
+Manage Site Information
+
+•	Admin can Change Website Name
+•	Admin can Website Path
+•	Admin can Manage Email Address
+
+Manage Site Content
+
+•	Admin can Change Site Content
+•	Admin can Change Contact Information
+

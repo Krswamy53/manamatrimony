@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ServoBoard - HTML Admin Template</title>
+
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/bootstrap-icon/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="assets/css/sweetalert.css">
+    <link rel="stylesheet" href="assets/css/toastify.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <button class="sidebar-collapse-mini d-xl-none d-block"><i class="bi bi-list"></i></button>
+        <!-- main sidebar -->
+        <div class="fixed-sidebar sidebar-mini">
+            <div class="logo">
+                <button class="sidebar-collapse"><i class="bi bi-list"></i></button>
+                <a href="index.html"><img src="assets/images/logo.png" alt="LOGO"></a>
+            </div>
+            <!-- sidebar menu -->
+            <div class="menu">
+                <div class="custom-scroll">
+                    <div class="sidebar-menu">
+                        <ul>
+                            <li class="sidebar-title"><span>Menu</span></li>
+                            <li class="sidebar-item"><a href="index.html" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right" title="Dashboard" tabindex="0"><i class="bi bi-grid-fill"></i> <span>Dashboard</span></a></li>
+                            <li class="sidebar-item has-sub">
+                                <a role="button" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right" title="Components" tabindex="0"><i class="bi bi-stack"></i> <span>Components</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="component_alert.html" class="sub-menu-item">Alert</a></li>
+                                    <li><a href="component_badge.html" class="sub-menu-item">Badge</a></li>
+                                    <li><a href="component_button.html" class="sub-menu-item">Button</a></li>
+                                    <li><a href="component_card.html" class="sub-menu-item">Card</a></li>
+                                    <li><a href="component_carousel.html" class="sub-menu-item">Carousel</a></li>
+                                    <li><a href="component_list_group.html" class="sub-menu-item">List Group</a></li>
+                                    <li><a href="component_modal.html" class="sub-menu-item">Modal</a></li>
+                                    <li><a href="component_progress.html" class="sub-menu-item">Progress</a></li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item"><a href="extra_component.html" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right" title="Extra Components" tabindex="0"><i class="bi bi-collection-fill"></i> <span>Extra Components</span></a></li>
+                            <li class="sidebar-title"><span>Forms & Tables</span></li>
+                            <li class="sidebar-item"><a href="form_element.html" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right" title="Form Elements" tabindex="0"><i class="bi bi-hexagon-fill"></i> <span>Form Elements</span></a></li>
+                            <li class="sidebar-item"><a href="form_layout.html" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right" title="Form Layout" tabindex="0"><i class="bi bi-file-earmark-medical-fill"></i> <span>Form Layout</span></a></li>
+                            <li class="sidebar-item"><a href="editor.html" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right" title="Form Editor" tabindex="0"><i class="bi bi-pen-fill"></i> <span>Text Editor</span></a></li>
+                            <li class="sidebar-item"><a href="table.html" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right" title="Table" tabindex="0"><i class="bi bi-grid-1x2-fill"></i> <span>Table</span></a></li>
+                            <li class="sidebar-item"><a href="data_table.html" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right" title="Datatable" tabindex="0"><i class="bi bi-file-earmark-spreadsheet-fill"></i> <span>Datatable</span></a></li>
+                            <li class="sidebar-title"><span>Extra UI</span></li>
+                            <li class="sidebar-item"><a href="widget.html" class="sidebar-link active" data-bs-toggle="tooltip" data-bs-placement="right" title="Widgets" tabindex="0"><i class="bi bi-pentagon-fill"></i> <span>Widgets</span></a></li>
+                            <li class="sidebar-item has-sub">
+                                <a role="button" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right" title="Icons" tabindex="0"><i class="bi bi-egg-fill"></i> <span>Icons</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="bootstrap_icon.html" class="sub-menu-item">Bootstrap Icons </a></li>
+                                    <li><a href="font_awesome.html" class="sub-menu-item">Fontawesome</a></li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item"><a href="chart.html" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right" title="Charts" tabindex="0"><i class="bi bi-bar-chart-fill"></i> <span>Apexcharts</span></a></li>
+                            <li class="sidebar-title"><span>Pages</span></li>
+                            <li class="sidebar-item"><a href="email.html" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right" title="Email Application" tabindex="0"><i class="bi bi-envelope-fill"></i> <span>Email Application</span></a></li>
+                            <li class="sidebar-item has-sub">
+                                <a role="button" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right" title="Authentication" tabindex="0"><i class="bi bi-person-badge-fill"></i> <span>Authentication</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="login.html" class="sub-menu-item">Login</a></li>
+                                    <li><a href="register.html" class="sub-menu-item">Register</a></li>
+                                    <li><a href="password.html" class="sub-menu-item">Forgot Password</a></li>
+                                </ul>
+                            </li>
+                            <li class="sidebar-item has-sub">
+                                <a role="button" class="sidebar-link" data-bs-toggle="tooltip" data-bs-placement="right" title="Errors" tabindex="0"><i class="bi bi-x-octagon-fill"></i> <span>Errors</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="403.html" class="sub-menu-item">403</a></li>
+                                    <li><a href="404.html" class="sub-menu-item">404</a></li>
+                                    <li><a href="500.html" class="sub-menu-item">500</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- sidebar menu -->
+        </div>
+        <!-- main sidebar -->
+        <div class="main-content">
+            <div class="breadcrumb-wrap mb-20">
+                <div class="d-md-flex d-block justify-content-between align-items-center">
+                    <div class="left">
+                        <h1>Widget</h1>
+                        <p>A table displays a collections of data grouped into rows</p>
+                    </div>
+                    <div class="right">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                <li class="breadcrumb-item"><i class="bi bi-caret-right"></i></li>
+                                <li class="breadcrumb-item active" aria-current="page">Widget</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-10">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="panel mb-10">
+                        <div class="panel-heading">
+                            <span>Chat Box</span>
+                        </div>
+                        <div class="panel-body">
+                            <div class="chat-box">
+                                <div class="top">
+                                    <img src="assets/images/avatar-2.jpg" alt="user">
+                                    <div class="txt">
+                                        <span class="name">Joshua Ward</span>
+                                        <span class="status active">Active now</span>
+                                    </div>
+                                </div>
+                                <div class="chat-panel">
+                                    <div class="custom-scroll">
+                                        <div class="message-in">
+                                            <div class="part-img">
+                                                <img src="assets/images/avatar-1.jpg" alt="image">
+                                            </div>
+                                            <div class="txt-wrap">
+                                                <div class="part-txt">
+                                                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form.</p>
+                                                </div>
+                                                <div class="part-txt">
+                                                    <p>By injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="message-out">
+                                            <div class="txt-wrap">
+                                                <div class="part-txt">
+                                                    <p>On the Internet tend to repeat.</p>
+                                                </div>
+                                                <div class="part-txt">
+                                                    <div class="media">
+                                                        <img src="assets/images/image-16.jpg" alt="image">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="part-img">
+                                                <img src="assets/images/avatar-2.jpg" alt="image">
+                                            </div>
+                                        </div>
+                                        <div class="message-in">
+                                            <div class="part-img">
+                                                <img src="assets/images/avatar-1.jpg" alt="image">
+                                            </div>
+                                            <div class="txt-wrap">
+                                                <div class="part-txt">
+                                                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="message-out">
+                                            <div class="txt-wrap">
+                                                <div class="part-txt">
+                                                    <p>It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+                                                </div>
+                                            </div>
+                                            <div class="part-img">
+                                                <img src="assets/images/avatar-2.jpg" alt="image">
+                                            </div>
+                                        </div>
+                                        <div class="message-in">
+                                            <div class="part-img">
+                                                <img src="assets/images/avatar-1.jpg" alt="image">
+                                            </div>
+                                            <div class="txt-wrap">
+                                                <div class="part-txt">
+                                                    <div class="media">
+                                                        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" style="pointer-events: auto;"></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="message-out">
+                                            <div class="txt-wrap">
+                                                <div class="part-txt">
+                                                    <p>Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur.</p>
+                                                </div>
+                                                <div class="part-txt">
+                                                    <div class="media">
+                                                        <video controls="">
+                                                            <source src="https://assets.mixkit.co/videos/preview/mixkit-going-down-a-curved-highway-down-a-mountain-41576-large.mp4" type="video/mp4">
+                                                            Your browser does not support the video tag.
+                                                        </video>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="part-img">
+                                                <img src="assets/images/avatar-2.jpg" alt="image">
+                                            </div>
+                                        </div>
+                                        <div class="message-in">
+                                            <div class="part-img">
+                                                <img src="assets/images/avatar-1.jpg" alt="image">
+                                            </div>
+                                            <div class="txt-wrap">
+                                                <div class="part-txt">
+                                                    <p>The generated Lorem Ipsum is therefore always free.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="message-type">
+                                    <form>
+                                        <label for="uploadPicture"><i class="bi bi-camera"></i></label>
+                                        <input type="file" name="picture" id="uploadPicture">
+                                        <textarea placeholder="Type your message here..."></textarea>
+                                        <button><i class="bi bi-send"></i></button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <div class="panel mb-10">
+                        <div class="panel-heading">
+                            <span>Task List</span>
+                        </div>
+                        <div class="panel-body">
+                            <p>What to do in this week</p>
+                            <ul class="todo-list">
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="task1">
+                                        <label for="task1">Call to Mary</label> <span class="badge rounded-pill bg-danger">Today</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="task2" checked>
+                                        <label for="task2">Buy milk on the way home</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="task3">
+                                        <label for="task3">Finish the previous task</label> <span class="badge rounded-pill bg-warning">Important</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="task4" checked>
+                                        <label for="task4">Go to home</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="task5">
+                                        <label for="task5">Finish the current template</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="task6" checked>
+                                        <label for="task6">Write documentation</label> <span class="badge rounded-pill bg-success">Well</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="task7">
+                                        <label for="task7"><i class="far fa-chart-bar"></i>Make statistics block</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="task8" checked>
+                                        <label for="task8">Add element to this list</label> <span class="badge rounded-pill bg-secondary">Tomorrow</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="task9">
+                                        <label for="task9">Finish the previous task</label> <span class="badge rounded-pill bg-warning">Important</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="task10" checked>
+                                        <label for="task10">Go to home</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="task11">
+                                        <label for="task11">Finish the current template</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="task13">
+                                        <label for="task13">Finish list</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12 col-lg-12">
+                    <div class="panel mb-10">
+                        <div class="panel-heading">
+                            <span>Pricing Plan</span>
+                        </div>
+                        <div class="panel-body">
+                            <div class="pricing">
+                                <div class="row g-10 align-items-center justify-content-lg-start justify-content-center">
+                                    <div class="col-xxl-3 col-xl-4 col-lg-5 col-md-6 col-sm-8">
+                                        <div class="single-box">
+                                            <div class="top">
+                                                <h3>Starter Plan</h3>
+                                                <div class="price">
+                                                    <h4>$29.99<span>/Mo</span></h4>
+                                                </div>
+                                            </div>
+                                            <div class="middle">
+                                                <ul>
+                                                    <li>25 Analytics Compaign</li>
+                                                    <li>1300 Keywords</li>
+                                                    <li>25 social media reviews</li>
+                                                    <li>SEO Management</li>
+                                                    <li>SEO Copywriting</li>
+                                                    <li>1 Free Optimization</li>
+                                                    <li>24/7 support</li>
+                                                </ul>
+                                            </div>
+                                            <div class="bottom">
+                                                <a href="#" class="btn btn-primary">Purchase Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-3 col-xl-4 col-lg-5 col-md-6 col-sm-8">
+                                        <div class="single-box center">
+                                            <div class="top">
+                                                <h3>Basic Plan</h3>
+                                                <div class="price">
+                                                    <h4>$49.99<span>/Mo</span></h4>
+                                                </div>
+                                            </div>
+                                            <div class="middle">
+                                                <ul>
+                                                    <li>50 Analytics Compaign</li>
+                                                    <li>1600 Keywords</li>
+                                                    <li>50 social media reviews</li>
+                                                    <li>SEO Management</li>
+                                                    <li>SEO Copywriting</li>
+                                                    <li>5 Free Optimization</li>
+                                                    <li>24/7 support</li>
+                                                </ul>
+                                            </div>
+                                            <div class="bottom">
+                                                <a href="#" class="btn btn-primary">Purchase Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-3 col-xl-4 col-lg-5 col-md-6 col-sm-8">
+                                        <div class="single-box">
+                                            <div class="top">
+                                                <h3>Enterprise plan</h3>
+                                                <div class="price">
+                                                    <h4>$79.99<span>/Mo</span></h4>
+                                                </div>
+                                            </div>
+                                            <div class="middle">
+                                                <ul>
+                                                    <li>75 Analytics Compaign</li>
+                                                    <li>1900 Keywords</li>
+                                                    <li>75 social media reviews</li>
+                                                    <li>SEO Management</li>
+                                                    <li>SEO Copywriting</li>
+                                                    <li>9 Free Optimization</li>
+                                                    <li>24/7 support</li>
+                                                </ul>
+                                            </div>
+                                            <div class="bottom">
+                                                <a href="#" class="btn btn-primary">Purchase Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xxl-3 col-xl-4 col-lg-5 col-md-6 col-sm-8">
+                                        <div class="single-box">
+                                            <div class="top">
+                                                <h3>Business Plan</h3>
+                                                <div class="price">
+                                                    <h4>$99.99<span>/Mo</span></h4>
+                                                </div>
+                                            </div>
+                                            <div class="middle">
+                                                <ul>
+                                                    <li>100 Analytics Compaign</li>
+                                                    <li>2200 Keywords</li>
+                                                    <li>100 social media reviews</li>
+                                                    <li>SEO Management</li>
+                                                    <li>SEO Copywriting</li>
+                                                    <li>13 Free Optimization</li>
+                                                    <li>24/7 support</li>
+                                                </ul>
+                                            </div>
+                                            <div class="bottom">
+                                                <a href="#" class="btn btn-primary">Purchase Now</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/apexcharts.js"></script>
+    <script src="assets/js/sweetalert.min.js"></script>
+    <script src="assets/js/toastify-js.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

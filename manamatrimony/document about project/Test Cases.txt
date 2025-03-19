@@ -1,0 +1,44 @@
+Functional Test Cases
+Verify that all mandatory fields are marked as such and cannot be left blank.
+Validate that the registration form accepts valid and unique email addresses.
+Test if the password field contains a requirement for minimum input length.
+Check that the “Confirm Password” field matches the password entered.
+Test if the registration form displays the right error messages for invalid or wrong inputs.
+Verify that the registration form clears all fields after a successful registration.
+Test if the registration process allows users to enter special characters in fields where applicable.
+Validate that the form prevents registration with an already registered email address.
+Test if the registration page has proper validation for optional fields.
+Verify that a user receives a confirmation email upon the completion of a successful registration session.
+Test if the registration form supports different input formats, such as uppercase, lowercase, and mixed case.
+Validate if the registration form handles leading and trailing spaces appropriately.
+Test if the registration page has a “Terms and Conditions” checkbox that is marked as a mandatory field.
+
+
+Check if the registration form has all the fields per the requirement document.
+Check if the user is able to sign up or register by entering the valid data in all the fields.
+Check if the user can sign up by entering the valid data only in mandatory fields.
+Check the registration form by entering the data only in the non-mandatory field.
+Check the signup form by entering invalid data in all the mandatory fields.
+Check all the mandatory fields are marked with an asterisk symbol.
+Check the registration form by entering the data only in some mandatory fields.
+Check the registration page without entering any data in the fields.
+Check the blank fields of the registration form page by clicking on the submit button.
+Check the alert message for all the mandatory fields.
+Check the confirmation message when the user has successfully signed up or registered.
+Check if all the fields have a valid label and placeholder.
+Check whether all the fields have cleared the value after clicking the cancel button.
+Check whether the keyboard tab button functionality is working or not.
+Check the default values of all the fields on the registration page.
+Check if the system sends a confirmation message through the email address after successfully filling and submitting the registration form.
+Check whether the validation is available for the email, username, and password fields.
+Check whether the password field values are displayed in an encrypted format.
+Check whether the validation is added for passwords and confirm whether passwords are the same.
+Check an eye icon added on the password and confirm the password field.
+Check by clicking on the eye icon. password should be shown for both passwords and confirm password fields.
+Check whether the captcha is added to the form or not.
+If any validation fails, the entered user information stays as it is or gets removed.
+Check possible validation, which should be done on the client side whenever possible.
+A warning message will be displayed if the user enters blank spaces for the mandatory field and clicks submit.
+Check those users who cannot register an account with the same registered email by adding the +(plus) symbol, for example, mailto:useractual+1@gmail.com.
+Check if the error message displays by entering an already registered email address.
+Check if the user signed up with email and social platforms and both have the same email; consider it one email uniquely, not two separate accounts.

@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+    <meta charset="utf-8">
+    <title>Advance Search</title>
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style729a.css?v=515121.0" rel="stylesheet">
+    <link href="css/smartsearch.css" rel="stylesheet">
+
+    <link href="css/responsive.css" rel="stylesheet">
+    <!--Color Switcher Mockup-->
+    <link href="css/color-switcher-design.css" rel="stylesheet">
+
+
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+
+
+
+
+    <script>
+        function fillage(str) {
+            var xmlhttp;
+            if (str == "") {
+                document.getElementById("toage").innerHTML = "";
+                return;
+            }
+            if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp = new XMLHttpRequest();
+            } else { // code for IE6, IE5
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("toage").innerHTML = xmlhttp.responseText;
+                }
+            }
+            //alert(str);
+            xmlhttp.open("GET.html", "filltoage03d2.html?q=" + str, true);
+            xmlhttp.send();
+        }
+    </script>
+    <style>
+        .result-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .result-item p {
+            margin: 5px 0;
+        }
+
+        .result-item.grid-view .result-religion,
+        .result-item.grid-view .result-caste {
+            display: none;
+        }
+
+        .result-item {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            width: calc(33.33% - 20px);
+            float: left;
+            box-sizing: border-box;
+        }
+
+        .result-row {
+            clear: both;
+            overflow: auto;
+        }
+
+        .contact-form .form-group select {
+            text-align: left !important;
+        }
+
+        @media screen and (max-width: 768px) {
+            .selcs {
+                max-width: 83%;
+                margin-left: 22px;
+            }
+
+            .page-title {
+
+                display: none;
+            }
+
+            .errsec {
+                margin-top: 30px;
+            }
+
+            .contact-form {
+                padding-top: 35px;
+            }
+        }
+
+        @media screen and (max-width: 568px) {
+            .selcs {
+                max-width: 83%;
+                margin-left: 22px;
+            }
+
+            .page-title {
+
+                display: none;
+            }
+
+            .errsec {
+                margin-top: 30px;
+            }
+        }
+
+        .bootstrap-select>.dropdown-toggle {
+            position: relative;
+            width: 100%;
+            z-index: 1;
+            text-align: right;
+            white-space: nowrap;
+            height: 3rem;
+            line-height: 34px;
+            border-color: #a1a7a1;
+        }
+
+        .contact-form .form-group select {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            z-index: 1;
+            text-align: right;
+            margin: 0;
+            white-space: nowrap;
+            height: 3rem;
+            line-height: 34px;
+            border-color: #a1a7a1;
+        }
+
+        dropdown bootstrap-select show-tick {
+            width: 100%;
+        }
+
+        .bootstrap-select:not([class*="col-"]):not([class*="form-control"]):not(.input-group-btn) {
+            width: 100% !important;
+        }
+    </style>
+</head>
+
+<body>
+    <style>
+        .result-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .result-item p {
+            margin: 5px 0;
+        }
+
+        .result-item.grid-view .result-religion,
+        .result-item.grid-view .result-caste,
+        .result-item.grid-view .result-status,
+        .result-item.grid-view .result-education,
+        .result-item.grid-view .result-country,
+        .result-item.grid-view .result-state,
+        .result-item.grid-view .result-city,
+        .result-item.grid-view .result-email {
+            display: none;
+        }
+
+        .result-item.grid-view .non-list {
+            display: block;
+        }
+
+        .result-item.grid-view .non-grid {
+            display: none;
+        }
+
+        .result-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .result-item p {
+            margin: 5px 0;
+        }
+
+        .result-item.grid-view .result-religion,
+        .result-item.grid-view .result-caste,
+        .result-item.grid-view .result-status,
+        .result-item.grid-view .result-education,
+        .result-item.grid-view .result-country,
+        .result-item.grid-view .result-state,
+        .result-item.grid-view .result-city,
+        .result-item.grid-view .result-email {
+            display: none;
+        }
+
+        .result-item.grid-view .non-list {
+            display: block;
+        }
+
+        .button-container2 {
+            display: none;
+        }
+
+        .result-item.grid-view .non-grid {
+            display: none;
+        }
+
+        .result-item {
+            border: 1px solid green;
+            border-radius: 5px;
+            /* margin: 10px; */
+            padding: 10px;
+            width: 250px;
+            height: 300px;
+
+
+        }
+
+        .result-label,
+        .result-value {
+            display: none;
+        }
+
+
+        .result-row {
+
+
+            padding: 20px;
+            display: flex;
+
+
+
+        }
+
+        .result-row img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+
+
+
+        }
+
+        .nn {
+            text-align: center;
+        }
+
+        .theme-btnn {
+            margin-left: 20px;
+        }
+
+        .contact-form .form-group select {
+            text-align: left !important;
+        }
+    </style>
+
+
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader"></div>
+        <!-- Header span -->
+
+        <!-- Header Span -->
+        <span class="header-span"></span>
+
+        <!-- Main Header-->
+        <style>
+            .rowh {
+                margin-right: 29px;
+            }
+        </style>
+        <script>
+            document.addEventListener(function (e) {
+                var keyCode = e.keyCode ? e.keyCode : e.which;
+                if (keyCode == 44) {
+                    stopPrntScr();
+                }
+            });
+
+            function stopPrntScr() {
+
+                var inpFld = document.createElement("input");
+                inpFld.setAttribute("value", ".");
+                inpFld.setAttribute("width", "0");
+                inpFld.style.height = "0px";
+                inpFld.style.width = "0px";
+                inpFld.style.border = "0px";
+                document.body.appendChild(inpFld);
+                inpFld.select();
+                document.execCommand("copy");
+                inpFld.remove(inpFld);
+            }
+
+            function AccessClipboardData() {
+                try {
+                    window.clipboardData.setData('text', "Access   Restricted");
+                } catch (err) { }
+            }
+            setInterval("AccessClipboardData()", 300);
+        </script>
+
+        <link href="css/stylenew.css" rel="stylesheet">
+        <!-- Main Header-->
+
+        <header class="main-header header-style-two">
+            <div class="buy-script">
+            <a href="" target="_blank">
+          <p class="text-white text-center"><span class="blinks"><i class="fa fa-phone" aria-hidden="true"></i></span>
+            +91 8019192373 </p>
+        </a>
+            </div>
+            <div class="main-box">
+                <div class="auto-container clearfix">
+                    <div class="logo-box">
+                        <div class="logo"><a href="index.html"><img src="images/logo-2.png" alt="" title=""></a></div>
+                    </div>
+
+                    <!--Nav Box-->
+                    <div class="nav-outer clearfix">
+                        <div class="mobileapp_Icon1">
+                            <a href="#" target="_blank"><img src="images/app-ic.png"></a>
+                        </div>
+                        <!--Mobile Navigation Toggler-->
+                        <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
+                        <!-- Main Menu -->
+                        <nav class="main-menu navbar-expand-md navbar-light">
+
+                            <div class="navbar-header">
+                                <!-- Togg le Button -->
+                                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="icon flaticon-menu-button"></span>
+                                </button>
+                            </div>
+
+                            <div class="collapse navbar-collapse clearfix" id="navbarSupportedContent">
+
+                                <ul class="navigation clearfix">
+
+                                    <li class="current dropdown"><a href="index.php">Home</a></li>
+
+                                    <li class="dropdown"><a href="about-us.php">About</a>
+
+                                        <ul>
+                                            <li><a href="about-us.php">About Us</a></li>
+                                            <li><a href="terms-conditions.php">Terms & Condation</a></li>
+                                            <li><a href="faqs.php">FAQ's</a> </li>
+                                            <li><a href="privacy-policy.php">Privacy Policy</a></li>
+                                            <li><a href="returns-and-cancellation.php">Refund Policy</a></li>
+                                            <li><a href="disclaimer.php">Disclaimer</a></li>
+                                            <li><a href="safematrimony.php">Safe Matrimony</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="dropdown"><a href="my_offer.php">Membership </a></li>
+                                    <!--<li class="dropdown"><a href="success_story">Happy Story</a></li>-->
+
+                                    <li class="dropdown"><a href="">Search</a>
+
+                                        <ul>
+
+                                            <li><a href="quicksearch2.php">Quick Search</a></li>
+                                            <li><a href="basicsearch2.php">Basic Search</a> </li>
+                                            <li><a href="advancesearch.php">Advanced Search</a></li>
+                                            <li><a href="">Key Word Search</a></li>
+                                            <li><a href="location.php"> Location Search </a></li>
+                                            <li><a href="occupation.php">Occupation Search</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class=""><a href="contactus.php">Contact</a></li>
+
+                                    <!-- <li><a href="wedding-directory/index" target=_blank>Wedding Services</a></li> -->
+
+
+                                </ul>
+
+                            </div>
+                        </nav>
+                        <!-- Main Menu End-->
+
+                        <!-- Outer box -->
+                        <div class="outer-box">
+                            <!--Search Box-->
+
+
+                            <!-- Button Box -->
+                            <div class="btn-box">
+                                <a href="loginform.php" class="theme-btn btn btn-style-one"><span
+                                        class="btn-title">Login</span></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu  -->
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+                <div class="close-btn"><span class="icon flaticon-cancel-1"></span></div>
+
+                <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                <nav class="menu-box">
+                    <div class="nav-logo"><a href="index.html"><img src="images/logo-2.png" alt="" title=""></a></div>
+
+                    <ul class="navigation clearfix">
+                        <!--Keep This Empty / Menu will come through Javascript-->
+                    </ul>
+                    <li class="dropdown" style="margin-left:22px;margin-top:8px;font-size:16px;font-weight:600"><a
+                            href="success_story.html" style="color:#343a40">Happy Story</a></li>
+                    <hr>
+                    <a href="loginform.php" class="theme-btn btn-style-one ml-4 mt-2"><span
+                            class="btn-title">Login</span></a>
+                    
+                </nav>
+            </div><!-- End Mobile Menu -->
+        </header>
+        <div id="search-popup" class="search-popup">
+            <div class="close-search theme-btn"><span class="fas fa-window-close"></span></div>
+            <div class="popup-inner">
+                <div class="overlay-layer"></div>
+                <div class="search-form">
+                    <form method="post" action="">
+                        <div class="form-group">
+                            <fieldset>
+                                <input type="search" class="form-control" placeholder="Enter Matrimony ID" value=""
+                                    name="matriid" required>
+                                <input type="submit" value="Search Profile!" name="submit_id" class="theme-btn">
+                            </fieldset>
+                        </div>
+                    </form>
+
+                    <br>
+                    <h3>Recent Search Keywords</h3>
+                    <ul class="recent-searches">
+
+
+                        <li><a href="religion_searchfca2.html?religion=Christian">Christian</a></li>
+
+
+                        <li><a href="religion_searchd660.html?religion=Hindu">Hindu</a></li>
+
+
+                        <li><a href="religion_search8d18.html?religion=Inter-Religion">Inter-Religion</a></li>
+
+
+                        <li><a href="religion_search76cb.html?religion=Jain">Jain</a></li>
+
+
+                        <li><a href="religion_searchffd1.html?religion=Muslim">Muslim</a></li>
+
+
+                        <li><a href="religion_search0009.html?religion=Sikh">Sikh</a></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </div>
+        <!--End Main Header -->
+
+        <!--Page Title-->
+
+        <section class="page-title" style="background-image:url(images/background/5.jpg);">
+            <div class="auto-container">
+                <h1>Search Profile</h1>
+                <ul class="bread-crumb clearfix">
+                    <li><a href="index.html">Home</a></li>
+                    <li>Search Profile</li>
+                </ul>
+            </div>
+        </section>
+        <!--End Page Title-->
+
+        <!--Error Section-->
+        <section class="error-section2 errsec">
+            <div class="anim-icons full-width">
+                <span class="icon icon-circle-blue wow fadeIn"></span>
+                <span class="icon icon-line-1 wow zoomIn"></span>
+                <span class="icon icon-circle-1 wow zoomIn"></span>
+            </div>
+
+            <div class="auto-container">
+                <div class="contact-form">
+
+                    <div class="text" style="margin-bottom: 6px;">Find Your Special Someone Here </div>
+                    <div class=" w3ls-title1 mb-4">
+                        <span class="price" style="font-size:20px;">
+                            <font color="#1d95d2">Advance Search, Id Search, Save Search Will Enable After Login</font>
+                        </span><br>
+                    </div>
+                    <div class="col-lg-12 mt-3">
+                        <form class="form-horizontal" action="" method="post">
+                            <div class="row">
+
+                                <div class="col-lg-3 col-md-3 col-sm-3 form-group">
+                                    <select class="custom-select-box ages selcs" title="To Age" id="gender"
+                                        name="gender" onChange="fillage(this.value)" required tabindex="2">
+                                        <option value="" selected>gender</option>
+                                        <option value="female">female</option>
+                                        <option value="male">male</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-3  form-group">
+                                    <select class="custom-select-box ages selcs" id="minAge" name="minAge"
+                                        onChange="fillage(this.value)" required tabindex="2">
+                                        <option value="" selected> From Age</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                        <option value="31">31</option>
+                                        <option value="32">32</option>
+                                        <option value="33">33</option>
+                                        <option value="34">34</option>
+                                        <option value="35">35</option>
+                                        <option value="36">36</option>
+                                        <option value="37">37</option>
+                                        <option value="38">38</option>
+                                        <option value="39">39</option>
+                                        <option value="40">40</option>
+                                        <option value="41">41</option>
+                                        <option value="42">42</option>
+                                        <option value="43">43</option>
+                                        <option value="44">44</option>
+                                        <option value="45">45</option>
+                                        <option value="46">46</option>
+                                        <option value="47">47</option>
+                                        <option value="48">48</option>
+                                        <option value="49">49</option>
+                                        <option value="50">50</option>
+                                        <option value="51">51</option>
+                                        <option value="52">52</option>
+                                        <option value="53">53</option>
+                                        <option value="54">54</option>
+                                        <option value="55">55</option>
+                                        <option value="56">56</option>
+                                        <option value="57">57</option>
+                                        <option value="58">58</option>
+                                        <option value="59">59</option>
+                                        <option value="60">60</option>
+                                        <option value="61">61</option>
+                                        <option value="62">62</option>
+                                        <option value="63">63</option>
+                                        <option value="64">64</option>
+                                        <option value="65">65</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 form-group">
+                                    <select class="custom-select-box ages selcs" title="To Age" id="maxAge"
+                                        name="maxAge" required tabindex="3" size="1">
+                                        <option value="" selected> To Age</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                        <option value="31">31</option>
+                                        <option value="32">32</option>
+                                        <option value="33">33</option>
+                                        <option value="34">34</option>
+                                        <option value="35">35</option>
+                                        <option value="36">36</option>
+                                        <option value="37">37</option>
+                                        <option value="38">38</option>
+                                        <option value="39">39</option>
+                                        <option value="40">40</option>
+                                        <option value="41">41</option>
+                                        <option value="42">42</option>
+                                        <option value="43">43</option>
+                                        <option value="44">44</option>
+                                        <option value="45">45</option>
+                                        <option value="46">46</option>
+                                        <option value="47">47</option>
+                                        <option value="48">48</option>
+                                        <option value="49">49</option>
+                                        <option value="50">50</option>
+                                        <option value="51">51</option>
+                                        <option value="52">52</option>
+                                        <option value="53">53</option>
+                                        <option value="54">54</option>
+                                        <option value="55">55</option>
+                                        <option value="56">56</option>
+                                        <option value="57">57</option>
+                                        <option value="58">58</option>
+                                        <option value="59">59</option>
+                                        <option value="60">60</option>
+                                        <option value="61">61</option>
+                                        <option value="62">62</option>
+                                        <option value="63">63</option>
+                                        <option value="64">64</option>
+                                        <option value="65">65</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-12 form-group">
+                                    <select class="custom-select-box ages selcs" data-max-options="1"
+                                        data-live-search="true" title="Select height" name="height" id="height" required
+                                        tabindex="1">
+                                        <option value="height" selected>Height</option>
+                                        <option value="4ft">4 feet</option>
+                                        <option value="4.2ft">4.2 feet</option>
+                                        <option value="4.4ft">4.4 feet</option>
+                                        <option value="4.6ft">4.6 feet</option>
+                                        <option value="4.8ft">4.8 feet</option>
+                                        <option value="4.10ft">4.10 feet</option>
+                                        <option value="5ft">5 feet</option>
+                                        <option value="5.2ft">5.2 feet</option>
+                                        <option value="5.4ft">5.4 feet</option>
+                                        <option value="5.6ft">5.6 feet</option>
+                                        <option value="5.8ft">5.8 feet</option>
+                                        <option value="5.10ft">5.10 feet</option>
+                                        <option value="6ft">6 feet</option>
+                                        <option value="6.2ft">6.2 feet</option>
+                                        <option value="6.4ft">6.4 feet</option>
+                                        <option value="6.6ft">6.6 feet</option>
+                                        <option value="6.8ft">6.8 feet</option>
+                                        <option value="6.10ft">6.10 feet</option>
+                                        <option value="7.0ft">7 feet</option>
+                                        <option value="7.1ft">7.1 feet</option>
+                                        <option value="7.2ft">7.2 feet</option>
+                                        <option value="7.3ft">7.3 feet</option>
+
+
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-12 form-group">
+                                    <select class="custom-select-box ages selcs" data-max-options="1"
+                                        data-live-search="true" title="Select Gender" name="status" id="status" required
+                                        tabindex="1">
+                                        <option value="Unmarried" selected>Unmarried</option>
+                                        <option value="Separated">Separated</option>
+                                        <option value="Widowed">Widowed</option>
+                                        <option value="Divorced">Divorced</option>
+                                        <option value="Any">Any</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 form-group">
+                                    <select class="cast" title="Select Religion" name="religion" id="religion"
+                                        onChange="fillcaste(this.value)" tabindex="5">
+                                        <option value="Christian">Christian</option>
+                                        <option value="Hindu">Hindu</option>
+                                        <!-- <option value="Inter-Religion">Inter-Religion</option> -->
+                                        <option value="Jain">Jain</option>
+                                        <option value="Muslim">Muslim</option>
+                                        <option value="Sikh">Sikh</option>
+                                    </select>
+                                </div>
+
+
+
+                                <div class="col-lg-3 col-md-3 col-sm-3 form-group">
+                                    <select class="cast" title="Select caste" name="caste" id="caste" tabindex="7">
+                                        <option value="Any">Caste</option>
+                                    </select>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-12 form-group">
+                                    <select class="custom-select-box ages selcs" data-max-options="1"
+                                        data-live-search="true" title="Select education" name="education" id="education" required
+                                        tabindex="1">
+                                        <option value="12th">12th</option>
+                                        <option value="B.A">B.A</option>
+                                        <option value="B.Com">B.Com</option>
+                                        <option value="B.Sc">B.Sc</option>
+                                        <option value="B.Arch">B.Arch </option>
+                                        <option value="B.Ed">B.Ed</option>
+                                        <option value="B.Ed (Education)	">B.Ed (Education) </option>
+                                        <option value="B.El.Ed (Elementary Education)	">B.El.Ed (Elementary
+                                            Education)
+                                        </option>
+                                        <option value="B.Lib.Sc (Library Sciences)	">B.Lib.Sc (Library Sciences)
+                                        </option>
+                                        <option value="B.P.Ed. (Physical Education)">B.P.Ed. (Physical Education)
+                                        </option>
+                                        <option value="B.Plan (Planning)	">B.Plan (Planning) </option>
+                                        <option value="	Bachelor of Fashion Technology		"> Bachelor of Fashion
+                                            Technology </option>
+                                        <option value="	BBA/BBM/BBS	"> BBA/BBM/BBS </option>
+                                        <option value="BCA (Computer Application)		">BCA (Computer Application)
+                                        </option>
+                                        <option value="BE B.Tech (Engineering)">BE B.Tech (Engineering)</option>
+                                        <option value="BFA (Fine Arts)">BFA (Fine Arts)</option>
+                                        <option value="BHM (Hotel Management)	">BHM (Hotel Management) </option>
+                                        <option value="BL/LLB/BGL (Law)">BL/LLB/BGL (Law)</option>
+                                        <option value="BSW (Social Work)">BSW (Social Work)</option>
+                                        <option value="	B.Pharm (Pharmacy)		"> B.Pharm (Pharmacy) </option>
+                                        <option value="	B.V.Sc. (Veterinary Science)"> B.V.Sc. (Veterinary Science)
+                                        </option>
+                                        <option value="BDS (Dental Surgery)	">BDS (Dental Surgery) </option>
+                                        <option value="BHMS (Homeopathy)">BHMS (Homeopathy)</option>
+                                        <option value="CA (Chartered Accountant)	">CA (Chartered Accountant)
+                                        </option>
+                                        <option value="CFA (Chartered Financial Analyst)">CFA (Chartered Financial
+                                            Analyst)</option>
+                                        <option value="CS (Company Secretary)">CS (Company Secretary)</option>
+                                        <option value="ICWA">ICWA</option>
+                                        <option value="Integrated PG">Integrated PG</option>
+                                        <option value="Engineering">Engineering</option>
+                                        <option value="Fashion/ Design	">Fashion/ Design </option>
+                                        <option value="Languages	">Languages </option>
+                                        <option value="Pilot Licenses	">Pilot Licenses </option>
+                                        <option value="M.Arch. (Architecture)	">M.Arch. (Architecture) </option>
+                                        <option value="M.Ed. (Education)">M.Ed. (Education)</option>
+                                        <option value="M.Lib.Sc. (Library Sciences)">M.Lib.Sc. (Library Sciences)
+                                        </option>
+                                        <option value="M.Plan. (Planning)">M.Plan. (Planning)</option>
+                                        <option value="Master of Fashion Technology">Master of Fashion Technology
+                                        </option>
+                                        <option value="Master of Health Administration	">Master of Health
+                                            Administration
+                                        </option>
+                                        <option value="Master of Hospital Administration">Master of Hospital
+                                            Administration</option>
+                                        <option value="MBA/PGDM">MBA/PGDM</option>
+                                        <option value="MCA PGDCA part time	">MCA PGDCA part time </option>
+                                        <option value="MCA/PGDCA">MCA/PGDCA</option>
+                                        <option value="ME/M.Tech/MS (Engg/Sciences)">ME/M.Tech/MS (Engg/Sciences)
+                                        </option>
+                                        <option value="MFA (Fine Arts)	">MFA (Fine Arts) </option>
+                                        <option value="ML/LLM (Law)	">ML/LLM (Law) </option>
+                                        <option value="MSW (Social Work)	">MSW (Social Work) </option>
+                                        <option value="PG Diploma">PG Diploma</option>
+                                        <option value="M.Com. (Commerce)">M.Com. (Commerce)</option>
+                                        <option value="M.Sc. (Science)">M.Sc. (Science)</option>
+                                        <option value="MA (Arts)">MA (Arts)</option>
+                                        <option value="M.Pharm. (Pharmacy)	">M.Pharm. (Pharmacy) </option>
+                                        <option value="M.V.Sc. (Veterinary Science)">M.V.Sc. (Veterinary Science)
+                                        </option>
+                                        <option value="MBBS">MBBS</option>
+                                        <option value="MD/ MS (Medicine)">MD/ MS (Medicine)</option>
+                                        <option value="MDS (Master of Dental Surgery)">MDS (Master of Dental
+                                            Surgery)
+                                        </option>
+                                        <option value="BPT (Physiotherapy">BPT (Physiotherapy</option>
+                                        <option value="MPT (Physiotherapy)">MPT (Physiotherapy)</option>
+                                        <option value="M.Phil. (Philosophy)">M.Phil. (Philosophy)</option>
+                                        <option value="Ph.D. (Doctorate)	">Ph.D. (Doctorate) </option>
+                                        <option value="Other Doctorate">Other Doctorate</option>
+                                        <option value="Other Diploma">Other Diploma</option>
+                                        <option value="Agriculture">Agriculture</option>
+                                        <option value="10th">10th</option>
+                                        <option value="Below 10th">Below 10th</option>
+                                    </select>
+                                </div>
+
+
+                                <div class="col-lg-3 col-md-3 col-sm-3 form-group">
+                                    <select class="custom-select-box ages selcs" title="To Age" id="country"
+                                        name="country" required tabindex="3" size="1">
+                                        <option value="" selected>Country Living In</option>
+
+
+
+                                        <option value="India">India</option>
+                                        <option value="others">others</option>
+
+
+                                    </select>
+
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3 form-group">
+                                    <select class="custom-select-box ages selcs" title="To Age" id="state" name="state"
+                                        required tabindex="3" size="1">
+
+
+
+
+
+
+                                        <option value="">Select a state...</option>
+                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                        <option value="Assam">Assam</option>
+                                        <option value="Bihar">Bihar</option>
+                                        <option value="Chhattisgarh">Chhattisgarh</option>
+                                        <option value="Goa">Goa</option>
+                                        <option value="Gujarat">Gujarat</option>
+                                        <option value="Haryana">Haryana</option>
+                                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                        <option value="Jharkhand">Jharkhand</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Kerala">Kerala</option>
+                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                        <option value="Maharashtra">Maharashtra</option>
+                                        <option value="Manipur">Manipur</option>
+                                        <option value="Meghalaya">Meghalaya</option>
+                                        <option value="Mizoram">Mizoram</option>
+                                        <option value="Nagaland">Nagaland</option>
+                                        <option value="Odisha">Odisha</option>
+                                        <option value="Punjab">Punjab</option>
+                                        <option value="Rajasthan">Rajasthan</option>
+                                        <option value="Sikkim">Sikkim</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Telangana">Telangana</option>
+                                        <option value="Tripura">Tripura</option>
+                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                        <option value="Uttarakhand">Uttarakhand</option>
+                                        <option value="West Bengal">West Bengal</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-3 form-group">
+                                    <select class="custom-select-box ages selcs" title="To Age" id="city" name="city"
+                                        required tabindex="3" size="1">
+                                        <option value="" selected>City Live In</option>
+
+
+                                        <option value="Agra">Agra</option>
+                                        <option value="Ahmedabad">Ahmedabad</option>
+                                        <option value="Allahabad">Allahabad</option>
+                                        <option value="Amritsar">Amritsar</option>
+                                        <option value="Aurangabad">Aurangabad</option>
+                                        <option value="Bangalore">Bangalore</option>
+                                        <option value="Bhopal">Bhopal</option>
+                                        <option value="Chandigarh">Chandigarh</option>
+                                        <option value="Chennai">Chennai</option>
+                                        <option value="Coimbatore">Coimbatore</option>
+                                        <option value="Delhi">Delhi</option>
+                                        <option value="Faridabad">Faridabad</option>
+                                        <option value="Ghaziabad">Ghaziabad</option>
+                                        <option value="Goa">Goa</option>
+                                        <option value="Gurgaon">Gurgaon</option>
+                                        <option value="Guwahati">Guwahati</option>
+                                        <option value="Hyderabad">Hyderabad</option>
+                                        <option value="Indore">Indore</option>
+                                        <option value="Jaipur">Jaipur</option>
+                                        <option value="Jalandhar">Jalandhar</option>
+                                        <option value="Jammu">Jammu</option>
+                                        <option value="Jamnagar">Jamnagar</option>
+                                        <option value="Jamshedpur">Jamshedpur</option>
+                                        <option value="Jodhpur">Jodhpur</option>
+                                        <option value="Kanpur">Kanpur</option>
+                                        <option value="Kochi">Kochi</option>
+                                        <option value="Kolkata">Kolkata</option>
+                                        <option value="Lucknow">Lucknow</option>
+                                        <option value="Ludhiana">Ludhiana</option>
+                                        <option value="Madurai">Madurai</option>
+                                        <option value="Mumbai">Mumbai</option>
+                                        <option value="Nagpur">Nagpur</option>
+                                        <option value="Nashik">Nashik</option>
+                                        <option value="Navi Mumbai">Navi Mumbai</option>
+                                        <option value="Noida">Noida</option>
+                                        <option value="Patna">Patna</option>
+                                        <option value="Pune">Pune</option>
+                                        <option value="Raipur">Raipur</option>
+                                        <option value="Rajkot">Rajkot</option>
+                                        <option value="Ranchi">Ranchi</option>
+                                        <option value="Surat">Surat</option>
+                                        <option value="Thane">Thane</option>
+                                        <option value="Vadodara">Vadodara</option>
+                                        <option value="Varanasi">Varanasi</option>
+                                        <option value="Visakhapatnam">Visakhapatnam</option>
+
+                                    </select>
+                                </div>
+
+                                <div class="col-lg-3 col-md-3 col-sm-12 form-group">
+                                    <select class="custom-select-box ages selcs" data-max-options="1"
+                                        data-live-search="true" title="Select photo" name="photo" id="with_photo" required
+                                        tabindex="1">
+                                        <option value="withphoto" selected> With Photo</option>
+                                        <option value="withoutphoto"> Without Photo</option>
+                                    </select>
+                                </div>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class="col-lg-3 col-md-3 col-sm-12 form-group">
+                                    <select class="custom-select-box ages selcs" data-max-options="1"
+                                        data-live-search="true" title="Select occupation" name="occupation" id="occupation" required
+                                        tabindex="1">
+                                        <option value="Any" selected>Any Occupation</option>
+                                        <option value="Advertising/ Entertainment/ Media">Advertising/
+                                            Entertainment/
+                                            Media</option>
+                                        <option value="Architecture & Design">Architecture & Design</option>
+                                        <option value="Artists">Artists</option>
+                                        <option value=" Animators & Web Designers"> Animators & Web Designers
+                                        </option>
+                                        <option value="Banking">Banking</option>
+                                        <option value=" Insurance & Financial Services"> Insurance & Financial
+                                            Services
+                                        </option>
+                                        <option value="Beauty">Beauty</option>
+                                        <option value=" Fashion & Jewellery Designers"> Fashion & Jewellery
+                                            Designers
+                                        </option>
+                                        <option value="Business Owner / Entrepreneur">Business Owner / Entrepreneur
+                                        </option>
+                                        <option value="Civil Services / Law Enforcement">Civil Services / Law
+                                            Enforcement</option>
+                                        <option value="Construction">Construction</option>
+                                        <option value="Customer Service/ Call Centre/BPO">Customer Service/ Call
+                                            Centre/BPO</option>
+                                        <option value="Defence">Defence</option>
+                                        <option value="Education/ Training">Education/ Training</option>
+                                        <option value="Electronics">Electronics</option>
+                                        <option value="Export/ Import">Export/ Import</option>
+                                        <option value="Finance and Accounts">Finance and Accounts</option>
+                                        <option value="Government Employee">Government Employee</option>
+                                        <option value="Health Care">Health Care</option>
+                                        <option value="Hotels/ Restaurants">Hotels/ Restaurants</option>
+                                        <option value="Human Resource">Human Resource</option>
+                                        <option value="IT">IT</option>
+                                        <option value="Legal">Legal</option>
+                                        <option value="Loss Prevention Manager">Loss Prevention Manager</option>
+                                        <option value="Management / Corporate Professionals">Management / Corporate
+                                            Professionals</option>
+                                        <option value="Manufacturing/ Engineering/ R&D">Manufacturing/ Engineering/
+                                            R&D
+                                        </option>
+                                        <option value="Marketing and Communications">Marketing and Communications
+                                        </option>
+                                        <option value="Merchant Navy">Merchant Navy</option>
+                                        <option value="Non Working">Non Working</option>
+                                        <option value="Oil & Gas">Oil & Gas</option>
+                                        <option value="Others">Others</option>
+                                        <option value="Pharmaceutical/ Biotechnology">Pharmaceutical/ Biotechnology
+                                        </option>
+                                        <option value="Purchase/ Logistics/ Supply chain">Purchase/ Logistics/
+                                            Supply
+                                            chain</option>
+                                        <option value="Real Estate">Real Estate</option>
+                                        <option value="Retail Chains">Retail Chains</option>
+                                        <option value="Sales/ Business Development">Sales/ Business Development
+                                        </option>
+                                        <option value="Science">Science</option>
+                                        <option value="Telecom/ ISP">Telecom/ ISP</option>
+                                        <option value="Travel/ Airlines">Travel/ Airlines</option>
+                                        <option value="Agriculture">Agriculture</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-3 col-md-3 col-sm-3  form-group">
+                                    <select class="custom-select-box ages selcs" id="income" name="income"
+                                        onChange="fillage(this.value)" required tabindex="2">
+                                        <option value="" selected>Annual Income</option>
+                                        <option value="2-3">2-3LPA</option>
+                                        <option value="3-4">3-4LPA</option>
+                                        <option value="4-5">4-5LPA</option>
+                                        <option value="5-6">5-6LPA</option>
+                                        <option value="6-7">6-7LPA</option>
+                                        <option value="7-8">7-8LPA</option>
+                                        <option value="8-9">8-9LPA</option>
+                                        <option value="9-10">9-10LPA</option>
+                                        <option value="10-50">10-50LPA</option>
+                                        <option value="50-1cr">50-1cr</option>
+                                        <option value="< 1cr">Over 1cr</option>
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="styled-input agile-styled-input-top form-group col-md-12">
+                                <button class="theme-btn btn-style-two" type="submit" id="search" name="search"><span
+                                        class="btn-title">Submit</span></button>
+                            </div>
+
+        </section>
+        </form>
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // Fetch form data
+            $gender = $_POST['gender'];
+            $minAge = $_POST['minAge'];
+            $maxAge = $_POST['maxAge'];
+            $religion = $_POST['religion'];
+            $caste = $_POST['caste'];
+            $status = $_POST['status'];
+            $education = $_POST['education'];
+            $country = $_POST['country'];
+            $state = $_POST['state'];
+            $city = $_POST['city'];
+            $photo = $_POST['photo'];
+
+
+            $host = 'localhost';
+            $user = 'root';
+            $pass = '';
+            $dbname = 'shadhi';
+
+            $conn = mysqli_connect($host, $user, $pass, $dbname);
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $query = "SELECT * FROM subhalekha WHERE gender = '$gender' AND age BETWEEN $minAge AND $maxAge AND religion = '$religion' AND caste = '$caste' AND status = '$status' AND education = '$education' "
+                . "AND country = '$country' AND state = '$state' AND city = '$city' ";
+            // echo $query;
+            $result = $conn->query($query);
+            if ($result->num_rows > 0) {
+
+                // Output the results
+                echo '<div class="nn">';
+                echo '<button class="theme-btn theme-btnn btn-style-two" type="button" onclick="toggleView(\'grid\')"><span class="btn-title">Grid View</span></button>';
+                echo '<button class="theme-btn theme-btnn btn-style-two" type="button" onclick="toggleView(\'list\')"><span class="btn-title">List View</span></button>';
+                echo '</div>';
+                echo "<div class='result-row'>";
+
+
+                while ($row = $result->fetch_assoc()) {
+
+                    echo "<div class='result-item grid-view'>"; // Initially showing grid view
+                    echo '<div>';
+                    if ($photo === 'withphoto') {
+                        echo "<img src='data:image/jpeg;base64," . base64_encode($row['phot']) . "' />";
+                    }
+                    echo '</div>';
+                    echo '<div>';
+                    echo "<table>";
+                    echo "<tr><th class='result-name'>Name:</th><td class='result-name'>" . $row['Name'] . "</td></tr>";
+                    echo "<tr><th class='result-age'>Age:</th><td class='result-age'>" . $row['age'] . "</td></tr>";
+                    echo "<tr><th class='result-gender'>Gender:</th><td class='result-gender'>" . $row['gender'] . "</td></tr>";
+                    echo "<tr><th class='result-label'>Religion:</th><td class='result-value'>" . $row['religion'] . "</td></tr>";
+                    echo "<tr><th class='result-label'>Caste:</th><td class='result-value'>" . $row['caste'] . "</td></tr>";
+                    echo '</table>';
+                    echo '</div>';
+                    echo '<div>';
+                    echo "<table>";
+                    echo "<tr><th class='result-label'>Status:</th><td class='result-value'>" . $row['status'] . "</td></tr>";
+                    echo "<tr><th class='result-label'>Education:</th><td class='result-value'>" . $row['education'] . "</td></tr>";
+                    echo "<tr><th class='result-label'>Country:</th><td class='result-value'>" . $row['country'] . "</td></tr>";
+                    echo "<tr><th class='result-label'>State:</th><td class='result-value'>" . $row['state'] . "</td></tr>";
+                    echo "<tr><th class='result-label'>City:</th><td class='result-value'>" . $row['city'] . "</td></tr>";
+                    echo '</table>';
+                    echo '</div>';
+                    echo '<div class="button-container2">';
+                    echo '<a href="loginform.php" class="message" onclick="openPopup(\'loginform.php\')"><i class="fas fa-envelope"></i> Send Message</a>';
+                    echo '<a href="loginform.php" class="shortlist" onclick="openPopup(\'loginform.php\')"><i class="fas fa-star"></i> Add to Shortlist</a>';
+                    echo '<a href="loginform.php" class="blocklist" onclick="openPopup(\'loginform.php\')"><i class="fas fa-ban"></i> Add to Blocklist</a>';
+                    echo '</div>';
+                    echo "</div>";
+
+                }
+                echo "</div>";
+            } else {
+                echo "0 results";
+            }
+        }
+        ?>
+
+        <script>
+            function toggleView(view) {
+                var items = document.querySelectorAll('.result-item');
+
+                if (view === 'grid') {
+                    items.forEach(item => {
+                        item.querySelector('.result-religion').style.display = 'none';
+                        item.querySelector('.result-caste').style.display = 'none';
+                        item.querySelector('.result-status').style.display = 'none';
+                        item.querySelector('.result-education').style.display = 'none';
+                        item.querySelector('.result-country').style.display = 'none';
+                        item.querySelector('.result-state').style.display = 'none';
+                        item.querySelector('.result-city').style.display = 'none';
+                        item.querySelector('.result-email').style.display = 'none';
+                        item.querySelector('.non-list').style.display =
+                            'block'; // Show only photo, name, age, and gender
+                        item.querySelector('.non-grid').style.display = 'none';
+                    });
+                } else if (view === 'list') {
+                    items.forEach(item => {
+                        item.querySelector('.result-religion').style.display = 'block';
+                        item.querySelector('.result-caste').style.display = 'block';
+                        item.querySelector('.result-status').style.display = 'block';
+                        item.querySelector('.result-education').style.display = 'block';
+                        item.querySelector('.result-country').style.display = 'block';
+                        item.querySelector('.result-state').style.display = 'block';
+                        item.querySelector('.result-city').style.display = 'block';
+                        item.querySelector('.result-email').style.display = 'block';
+                        item.querySelector('.non-list').style.display = 'none';
+                        item.querySelector('.non-grid').style.display = 'block'; // Show all details
+                    });
+                }
+            }
+        </script>
+
+        <script>
+            function toggleView(view) {
+                var items = document.querySelectorAll('.result-item');
+                var form = document.createElement('form');
+                form.setAttribute('method', 'POST');
+                form.setAttribute('action', 'search.php');
+
+                // Append each result item as a hidden input field to the form
+                items.forEach(item => {
+                    var hiddenInput = document.createElement('input');
+                    hiddenInput.setAttribute('type', 'hidden');
+                    hiddenInput.setAttribute('name', 'results[]');
+                    hiddenInput.setAttribute('value', item.outerHTML);
+                    form.appendChild(hiddenInput);
+                });
+
+                document.body.appendChild(form);
+
+                // Submit the form
+                form.submit();
+            }
+        </script>
+        <?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (isset($_POST['results'])) {
+                foreach ($_POST['results'] as $result) {
+                    echo $result; // Output each result item
+                }
+            } else {
+                echo "No results found.";
+            }
+        }
+        ?>
+        <div class="modal fade" id="dialog_send_message" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" id="dialog_content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Error</h4>
+                        <!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+                    </div>
+                    <div class="modal-body" align="center">
+                        Already You Have Done 5 Save & Search. <br>
+                        Please Delete Old and then try again
+                    </div>
+                    <div class="modal-footer" style="padding:1.5rem">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Error Section-->
+
+        <!-- Main Footer -->
+        <!-- <?php include "footer.php"; ?> -->
+        <!-- End Footer -->
+        <!-- End Footer -->
+
+        <!-- End Footer -->
+
+    </div>
+    <!--End pagewrapper-->
+
+    <!-- Color Palate / Color Switcher -->
+    <!-- End Color Switcher -->
+    <script>
+        function getsearch1() {
+            document.form1.action = "smart_search_result?page=1";
+        }
+
+        function getsearch2() {
+            document.form1.action = "step_smart";
+        }
+    </script>
+    <script>
+        function fillcaste(religion) {
+            var casteSelect = document.getElementById("caste");
+            casteSelect.innerHTML = ""; // Clear existing options
+
+            var casteOptions = {}; // Define caste options based on religion
+
+            // Populate caste options based on selected religion
+            switch (religion) {
+                case "Christian":
+                    casteOptions = {
+                        "Any": "Any",
+                        "Catholicism": "Catholicism",
+                        "Protestantism": "Protestantism",
+                        "Orthodox Christianity": "Orthodox Christianity",
+                        "Assyrins": "Assyrins",
+                        "Luthern": "Luthern",
+                        "Other": "Other"
+                    };
+                    break;
+                case "Hindu":
+                    casteOptions = {
+                        "Any": "Any",
+                        "Kapu": "Kapu",
+                        "Reddy": "Reddy",
+                        "Chowdary": "Chowdary",
+                        "Kshatriya": "Kshatriya",
+                        "Vaishya": "Vaishya",
+                        "Gowda": "Gowda",
+                        "Rajaka": "Rajaka",
+                        "Brahmin": "Brahmin",
+
+                        "Yadhava": "Yadhava",
+                        "Other": "Other"
+                    };
+                    break;
+                case "Muslim":
+                    casteOptions = {
+                        "Any": "Any",
+                        "Mohammads": "Mohammads",
+                        "Shaiks": "Shaiks",
+                        "Phatans": "Phatans",
+                        "Khans": "Khans",
+                        "Dhudekula": "Dhudekula",
+                        "Other": "Other"
+                    };
+                    break;
+                case "Jain":
+                    casteOptions = {
+                        "Any": "Any",
+                        "Digambara": "Digambara",
+                        "Svetambara": "Svetambara",
+                        "Other": "Other"
+                    };
+                    break;
+                case "Sikh":
+                    casteOptions = {
+                        "Any": "Any",
+                        "Ahluwalias": "Ahluwalias",
+                        "Kambos": "Kambos",
+                        "Ramgarhias": "Ramgarhias",
+                        "Rai Sikh": "Rai Sikh",
+                        "Other": "Other"
+                    };
+                    break;
+
+                default:
+                    casteOptions = {
+                        "Any": "Any"
+                    };
+                    break;
+            }
+
+            // Add caste options to the dropdown
+            for (var caste in casteOptions) {
+                var option = document.createElement("option");
+                option.value = casteOptions[caste];
+                option.text = caste;
+                casteSelect.add(option);
+            }
+        }
+    </script>
+    <!--Search Popup-->
+
+    <div id="search-popup1" class="search-popup1">
+        <div class="close-search theme-btn"><span class="fas fa-window-close"></span></div>
+        <div class="popup-inner">
+            <div class="overlay-layer"></div>
+            <div class="search-form">
+                <form method="post" action="">
+                    <div class="form-group">
+                        <div class="feature-block-two col-lg-12 col-md-12 col-sm-12 wow fadeInUp" align="center">
+                            <div class="inner-box" align="left">
+                                <div class="icon-box"><span class="icon flaticon-lecture"></span></div>
+                                <!--<div class="icon-box"><span class="icon flaticon-lecture"></span></div>-->
+                                <h4><a href="about.html">Horoscope Details</a></h4>
+                                <div class="text">Moonsign: </div>
+                                <div class="text">Star: </div>
+                                <div class="text">Horoscope Match: </div>
+                                <div class="text">Manglik: </div>
+                                <div class="text">Shani: </div>
+                                <div class="text">Gotra: </div>
+                                <div class="text">Place of Birth: </div>
+                                <div class="text">Place of Country: </div>
+                                <div class="text">Time of Birth:
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            </form>
+        </div>
+        <div id="search-popup2" class="search-popup2">
+            <div class="close-search theme-btn"><span class="fas fa-window-close"></span></div>
+            <div class="popup-inner">
+                <div class="overlay-layer"></div>
+                <div class="search-form">
+                    <form method="post" action="">
+                        <div class="form-group">
+
+                            <div class="feature-block-two col-lg-12 col-md-12 col-sm-12 wow fadeInUp" align="center">
+                                <div class="inner-box" align="left">
+                                    <div class="icon-box"><span class="icon flaticon-lecture"></span></div>
+                                    <h4><a href="about.html">Education Details</a></h4>
+                                    <div class="text">Education: CFA (Chartered Financial Analyst)</div>
+                                    <div class="text">Occupation: Animators & Web Designers</div>
+                                    <div class="text">Eduction Details: abcdwerwer</div>
+                                    <div class="text">Occupation Details: abc</div>
+                                    <div class="text">Employed In: Business</div>
+                                    <div class="text">Annual Income: 50000 Rs</div>
+                                    <div class="text">Working Hours: Normal [9-5]</div>
+                                    <div class="text">Working Location/City: Kutch</div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            </form>
+            <footer class="main-footer style-two">
+                <div class="auto-container">
+                    <!-- Footer Content -->
+                    <div class="footer-content" style="padding: 25px 0 10px;">
+                        <div class="footer-logo ftr-dsk-lg"><a href="#"><img src="images/logo.png" alt="Site Logo"></a>
+                        </div>
+                        <ul class="footer-nav ftr-dsk-mn">
+                            <li><a href="index.html">Home</a></li>
+                            <li>|</li>
+                            <li><a href="signup.html">SignUp</a></li>
+                            <li>|</li>
+
+                            <li><a href="success_story.html">Happy Story</a></li>
+                            <li>|</li>
+                            <li><a href="wedding-directory/index.html" target=_blank>Wedding Services</a></li>
+                            <li>|</li>
+                            <!-- <li><a href="franchise/login" target=_blank>Franchise</a></li>-->
+                            <li><a href="" target=_blank>Blog</a></li>
+                            <li>|</li>
+                            <li><a href="contactus.html">Contact Us</a></li>
+                        </ul>
+                        <div class="copyright-text"> &copy; Copyright 2024 All Rights Reserved. BY: <a href=""
+                                target="_blank"></a></div>
+                        <ul class="social-icon-one">
+
+                            <li><a href=""><span class="fab fa-facebook-f"></span></a></li>
+                            <li><a href=""><span class="fab fa-twitter"></span></a></li>
+                            <li><a href=""><span class="fab fa-youtube"></span></a></li>
+                            <li><a href=""><span class="fab fa-instagram"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </footer>
+
+        </div>
+
+        <style>
+            .search-popup .search-form {
+                position: relative;
+                padding: 0px 15px 0px;
+                max-width: 1024px;
+                margin: 0 auto;
+                margin-top: 150px;
+            }
+        </style>
+        <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-angle-double-up"></span></div>
+        <script>
+            $('select').selectpicker();
+        </script>
+        <link rel="stylesheet" href="css2/bootstrap-select.css" />
+        <script src="css2/jquery.min.js"></script>
+        <script src="css2/bootstrap.bundle.min.js"></script>
+        <script src="css2/bootstrap-select.min.js"></script>
+        <script src="js/jquery.fancybox.js"></script>
+        <script src="js/appear.js"></script>
+        <script src="js/owl.js"></script>
+        <script src="js/wow.js"></script>
+        <script src="js/script.js"></script>
+        <!-- Color Setting -->
+        <script src="js/color-settings.js"></script>
+        <script>
+            /* $(document).ready(function() {
+                    $('.btn').on('click', function() {
+                        var $this = $(this);
+                        var loadingText =
+                            '<i class="fa fa-spinner fa-spin faio"></i><span class="btn-title">Loading</span> ';
+                        if ($(this).html() !== loadingText) {
+                            $this.data('original-text', $(this).html());
+                            $this.html(loadingText);
+                        }
+                        setTimeout(function() {
+                            $this.html($this.data('original-text'));
+                        }, 500);
+                    });
+                }) */
+        </script>
+
+</body>
+
+</html>
